@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Ubuntu&display=swap');
+
+body{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    overflow-x: hidden;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+@keyframes load {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1000;
+        transform: translateY(0px);
+    }
+}
+
+.name {
+    padding: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0;
+    background-color: rgb(55, 55, 55);
+    border-radius: 15px;
+    animation-delay: 0.2;
+    animation-name: load;
+    animation-duration: 0.5s;
+}
+
+.same-line{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.content{
+    margin: 1rem;
+    animation-name: load;
+    animation-duration: 0.2s;
+}
+
+.pfp {
+    width: 25vh;
+    height: 25vh;
+    animation-name: load;
+    animation-duration: 0.2s;
+    animation-duration: 0.7s;
+    border-radius: 100%;
+}
+
+
+.exp-card {
+    border: 0.5rem solid rgb(25, 25, 25);
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.contact-icons{
+    font-size: 4rem;
+    transition: transform .2s;
+}
+
+
+.contact-icons:hover{
+    font-size: 4rem;
+    transform: scale(1.25);
+}
+
+.exp-grp{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+}
+
+@media screen and (min-width: 610px) {
+    .contact-bar{
+        display: grid;
+        gap: 1.5rem;
+        justify-items: center;
+        grid-auto-flow: column;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .contact-bar{
+        display: grid;
+        gap: 1rem;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .exp-grp{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-flow: column;
+    }
+}
